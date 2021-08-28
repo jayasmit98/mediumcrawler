@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/comments.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h2>Medium Crawler</h2>
+        <a href="/"><h4>Back to Home</h4></a>
+    </header>
+    <section>
+        <div class="post">
+            <h2>Post Description</h2>
+            <p><%= articles %></p>
+        </div>
+        <div class="comments">
+            <h2>Comments of the post</h2>
+            <ol>
+                <% for(var i=0;i<finalcomments.length;i++){%>
+                    <li>
+                        <h5><%= finalcomments[i].name %></h5>
+                        <p><%= finalcomments[i].comment %></p>
+                    </li>
+                <% } %>
+            </ol>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+    padding:4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1rem;
+    .part_1{
+        h2{
+            color: white;
+            font-size: 2.25rem;
+            margin-bottom:1rem;
+            text-align: center;
+            text-shadow: 0.1rem 0.1rem 0 black;
+            
+        }
+    }
+    .part_2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        input{
+            width:auto;
+            padding:0.5rem;
+            margin-bottom:0.5rem;
+        }
+        button{
+            width:auto;
+            border-radius: 0.25rem;
+            background-color: whitesmoke;
+            padding:0.5rem;
+            transition: transform 0.1s;
+            
+        }
+        button:active{
+            transform: translateY(0.15rem);
+            transform:scale(0.95);
+        }
+    }
+}
+.data_container{
+    padding:2rem;
+    .tags{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+        h3{
+            padding:0.25rem 0.5rem;
+            background-color: grey;
+            color: white;
+            border-radius: 0.25rem;
+            transition:transform 0.1s;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+        h3:hover{
+            transform:translateY(-0.2rem);
+            transform:scale(1.1);
+
+        }
+    }
+    .cards_container{
+        display: grid;
+        row-gap: 1rem;
+        .card{
+            background-color: rgb(77, 71, 71);
+            padding:1rem;
+            width: 100%;
+            overflow: hidden;
+            h6{
+                color:white;
+            }
+            .postpreview{
+                figure{
+                    width: 100%;
+                    object-fit: contain;
+                    overflow: hidden;
+                    img{
+                        width:100%;
+                    }
+                }
+                .details{
+                    display: grid;
+                    row-gap: 0.5rem;
+                    margin-bottom: 1rem;
+                    h2,h5{
+                        color:white;
+                    }
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    h5{
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+            h5{
+                color:white;
+            }
+            .reltags{
+                margin-top: 1rem;
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                li{
+                    background-color: rgb(240, 233, 233);
+                    padding:0.5rem;
+                    border: 0.2rem;
+                    margin-right: 0.25rem;
+                    margin-bottom: 0.25rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 728px)  {
+    header{
+        .part_2{
+            display: flex;
+            flex-direction: row;
+            input{
+                margin-bottom: 0rem;
+                margin-right:0.5rem;
+            }
+            button{
+                font-size: 1rem;
+            }
+        }
+    }
+    .data_container{
+        .cards_container{
+            padding:0rem 6rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+    }
+    
+}
